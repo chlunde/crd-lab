@@ -1,0 +1,16 @@
+apiVersion: pkg.crossplane.io/v1beta1
+kind: FunctionRevision
+metadata:
+  name: function-go-templating-7f94b920392a
+spec:
+  desiredState: Active
+  ignoreCrossplaneConstraints: false
+  image: xpkg.upbound.io/crossplane-contrib/function-go-templating:v0.5.0
+  packagePullPolicy: IfNotPresent
+  revision: 2
+  runtimeConfigRef:
+    apiVersion: pkg.crossplane.io/v1beta1
+    kind: DeploymentRuntimeConfig
+    name: default
+  skipDependencyResolution: false
+  tlsServerSecretName: function-go-templating-tls-server
